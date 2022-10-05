@@ -6,8 +6,8 @@ __main__.Employee
 """
 #---------------------------------------------------#
 """ type() to find the class attribute 
-    dir()  to list all attributes and methods
-    help() """
+    dir(x) list all attributes and methods
+    help(x) show the documentation for the object """
 #---------------------------------------------------#
 #Exploring object interface
 # Print the mystery employee's name
