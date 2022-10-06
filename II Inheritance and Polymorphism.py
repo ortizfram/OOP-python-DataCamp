@@ -55,3 +55,10 @@ p = Player(); p.draw()
 p.move(4); p.draw()
 p.move(5); p.draw()
 p.move(3); p.draw()
+"""
+<script.py> output:
+    |----------
+    ----|------
+    ---------|-
+    ----------|
+ """
