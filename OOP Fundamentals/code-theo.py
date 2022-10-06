@@ -190,4 +190,34 @@ class Employee:
 emp = Employee("Korel Rossi", -1000)
 print(emp.name)
 print(emp.salary)
+#---------------------------------------------------#
+#Write a class from scratch
+import numpy as np
+class Point:
 
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y  
+
+    def distance_to_origin(self):
+        return np.sqrt((self.x**2)+(self.y**2))
+
+    def reflect(self,axis):
+        if axis == "x":
+            self.y = - self.y
+        elif axis == "y":
+            self.x = - self.x
+        else:
+            print("ValueError: try with 'x' or 'y'")
+
+"""trying outputs:"""
+pt = Point(x=3.0)
+pt.reflect("y")
+print((pt.x, pt.y))
+pt.y = 4.0
+print(pt.distance_to_origin())
+"""
+must return :
+(-3.0,0.0)
+5.0"""
+#---------------------------------------------------#
