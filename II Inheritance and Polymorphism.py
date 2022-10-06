@@ -127,3 +127,29 @@ bd = BetterDate.from_str('2020-04-30')
 print(bd.year)
 print(bd.month)
 print(bd.day)
+#------------------------------------------------------------------------#
+# import datetime from datetime
+from datetime import datetime
+
+class BetterDate:
+    #contructor
+    def __init__(self, year, month, day):
+      self.year, self.month, self.day = year, month, day
+
+    #class method from_str
+    @classmethod
+    def from_str(cls, datestr):
+        year, month, day = map(int, datestr.split("-"))
+        return cls(year, month, day)
+      
+    # Define a class method from_datetime accepting a datetime object
+    @classmethod
+    def from_datetime(cls, datetime):
+        return BetterDate(datetime.year, datetime.month, datetime.day)
+
+# You should be able to run the code below with no errors: 
+today = datetime.today()     
+bd = BetterDate.from_datetime(today)   
+print(bd.year)
+print(bd.month)
+print(bd.day)
