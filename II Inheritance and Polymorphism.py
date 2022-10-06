@@ -128,6 +128,8 @@ print(bd.year)
 print(bd.month)
 print(bd.day)
 #------------------------------------------------------------------------#
+""" map()  returns a map object(which is an iterator) of the results after applying the given function """
+#---------------------------------------------------#
 # import datetime from datetime
 from datetime import datetime
 
