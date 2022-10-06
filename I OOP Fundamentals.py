@@ -1,9 +1,8 @@
 """
-In [1]:
-type(mystery)
-Out[1]:
-__main__.Employee 
-"""
+In this chapter, you'll learn what object-oriented programming (OOP) is, how it 
+differs from procedural-programming, and how it can be applied. You'll then define
+your own classes, and learn how to create methods, attributes, and constructors.
+************************************************************************************"""
 #---------------------------------------------------#
 """ type() to find the class attribute 
     dir(x) list all attributes and methods
