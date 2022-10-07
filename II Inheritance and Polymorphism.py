@@ -256,3 +256,44 @@ print("r.MAX_SPEED = ", r.MAX_SPEED)
 
 print("p.MAX_POSITION = ", p.MAX_POSITION)
 print("r.MAX_POSITION = ", r.MAX_POSITION)
+#----------------------------------------------------------------------#
+# Customizing a DataFrame
+
+# Import pandas as pd
+import pandas as pd
+
+# Define LoggedDF inherited from pd.DataFrame and add the constructor
+class LoggedDF(pd.DataFrame):
+    def __init__(self,*args, **kwargs): #catch all arguments
+        # call parent
+        pd.DataFrame.__init__(self,*args, **kwargs)
+        # asign created at to today datetime from pd.DataFrame
+        self.created_at = datetime.today()
+    
+    
+ldf = LoggedDF({"col1": [1,2], "col2": [3,4]})
+print(ldf.values)
+print(ldf.created_at)
+#----------------------------------------------------------------------#
+# create logging class for data with datetime & make it csv
+# Import pandas as pd
+import pandas as pd
+
+# Define LoggedDF inherited from pd.DataFrame and add the constructor
+class LoggedDF(pd.DataFrame):
+  
+  def __init__(self, *args, **kwargs):
+    # calling parent 
+    pd.DataFrame.__init__(self, *args, **kwargs)
+    #asigning created_at
+    self.created_at = datetime.today()
+    
+  def to_csv(self, *args, **kwargs):
+    # Copy self to a temporary DataFrame
+    temp = self.copy()
+    
+    # Create a new column filled with self.created_at  in the self copy
+    temp["created_at"] = self.created_at
+    
+    # Call pd.DataFrame.to_csv on temp, passing in *args and **kwargs
+    pd.DataFrame.to_csv(temp,*args, **kwargs)
