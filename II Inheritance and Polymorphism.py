@@ -208,3 +208,36 @@ class Manager(Employee):
   
     def display(self):
         print("Manager ", self.name)
+#------------------------------------------------------------------------#
+# custom child class = parent + bonus functions
+class Employee:
+    def __init__(self, name, salary=30000):
+        self.name = name
+        self.salary = salary
+
+    def give_raise(self, amount):
+        self.salary += amount
+
+#define manager class        
+class Manager(Employee):
+    def display(self):
+        print("Manager ", self.name)
+        
+    # contructor
+    def __init__(self, name, salary=50000, project=None):
+        # call parent constructor
+        Employee.__init__(self, name, salary)
+        #asign project attribute
+        self.project = project
+
+    # Add a give_raise method
+    def give_raise(self, amount, bonus=1.05):
+         #call parent method + bonus
+         Employee.give_raise(self, amount * bonus)
+    
+    
+mngr = Manager("Ashta Dunbar", 78500)
+mngr.give_raise(1000)
+print(mngr.salary)
+mngr.give_raise(2000, bonus=1.03)
+print(mngr.salary)
