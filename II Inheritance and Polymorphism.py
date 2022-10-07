@@ -155,3 +155,33 @@ bd = BetterDate.from_datetime(today)
 print(bd.year)
 print(bd.month)
 print(bd.day)
+#------------------------------------------------------------------------#
+""" inheritance : new class with all functionallity of old class + extra
+e.g.  class Mychild(MyParent):
+          # Do stuff   """
+#------------------------------------------------------------------------#
+# Create a subclass manager from employee class
+class Employee:
+  MIN_SALARY = 30000    
+
+  def __init__(self, name, salary=MIN_SALARY):
+      self.name = name
+      if salary >= Employee.MIN_SALARY:
+        self.salary = salary
+      else:
+        self.salary = Employee.MIN_SALARY
+        
+  def give_raise(self, amount):
+      self.salary += amount      
+        
+# Define a new class Manager inheriting from Employee
+class Manager(Employee):
+  pass
+
+# Define a Manager object
+mng = Manager('Debbie Lashko', 86500)
+
+# Print mng's name
+print(mng.name)
+print(mng.salary)
+#------------------------------------------------------------------------#
