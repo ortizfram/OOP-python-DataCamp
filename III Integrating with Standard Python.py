@@ -43,3 +43,7 @@ class BankAccount:
 acct = BankAccount(873555333)
 pn = Phone(873555333)
 print(acct == pn)
+#----------------------------------------------------------------------------------#
+""" when comparing a child object to a parent object
+    Python always calls the child's __eq__() method ."""
+#----------------------------------------------------------------------------------#
