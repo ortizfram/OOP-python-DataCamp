@@ -223,8 +223,8 @@ class Manager(Employee):
     def display(self):
         print("Manager ", self.name)
         
-    # contructor
-    def __init__(self, name, salary=50000, project=None):
+    # contructor, & adding new attribute 
+    def __init__(self, name, salary=50000, project=None): #changing values, and adding project
         # call parent constructor
         Employee.__init__(self, name, salary)
         #asign project attribute
