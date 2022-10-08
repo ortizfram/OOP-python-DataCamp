@@ -58,3 +58,52 @@ print(f)
 #----------------------------------------------------------------------------------#
 """ <- you use \"  \"  to scape quotation mark function & just for them to appear as decoration ."""
 #----------------------------------------------------------------------------------#
+"""Add the __str__() method to Employee that satisfies the following:
+
+      - If emp is an Employee object with name "Amar Howard" and salary of 40000, then print(emp) outputs"""
+class Employee:
+    def __init__(self, name, salary=30000):
+        self.name, self.salary = name, salary
+            
+    # Add the __str__() method
+    def __str__(self):
+        output = """
+        Employee name:{name}
+        Employee salary:{salary}
+        """.format(name = self.name, salary = self.salary)
+        return output
+
+emp1 = Employee("Amar Howard", 30000)
+print(emp1)
+emp2 = Employee("Carolyn Ramirez", 35000)
+print(emp2)
+"""  output:
+            Employee name:Amar Howard
+            Employee salary:30000
+            
+            Employee name:Carolyn Ramirez
+            Employee salary:35000"""
+#----------------------------------------------------------------------------------#
+#String representation of objects
+class Employee:
+    def __init__(self, name, salary=30000):
+        self.name, self.salary = name, salary
+      
+
+    def __str__(self):
+        s = "Employee name: {name}\nEmployee salary: {salary}".format(name=self.name, salary=self.salary)      
+        return s
+      
+    # Add the __repr__method  
+    def __repr__(self):
+        
+        return "Employee(\"{name}\", {salary})".format(name = self.name, salary = self.salary)
+
+
+emp1 = Employee("Amar Howard", 30000)
+print(repr(emp1))
+emp2 = Employee("Carolyn Ramirez", 35000)
+print(repr(emp2))
+"""output:
+Employee("Amar Howard", 30000)
+Employee("Carolyn Ramirez", 35000)"""
