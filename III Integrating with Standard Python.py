@@ -107,3 +107,8 @@ print(repr(emp2))
 """output:
 Employee("Amar Howard", 30000)
 Employee("Carolyn Ramirez", 35000)"""
+#----------------------------------------------------------------------------------#
+""" <- <- You should always define at least one of the string 
+representation methods for your object to make sure that 
+the person using your class can get important information about the object easily."""
+#----------------------------------------------------------------------------------#
