@@ -84,7 +84,7 @@ print(emp2)
             Employee name:Carolyn Ramirez
             Employee salary:35000"""
 #----------------------------------------------------------------------------------#
-#String representation of objects
+# __repr__() String representation of objects
 class Employee:
     def __init__(self, name, salary=30000):
         self.name, self.salary = name, salary
@@ -112,3 +112,22 @@ Employee("Carolyn Ramirez", 35000)"""
 representation methods for your object to make sure that 
 the person using your class can get important information about the object easily."""
 #----------------------------------------------------------------------------------#
+#Catching exceptions
+# MODIFY the function to catch exceptions
+def invert_at_index(x, ind):
+        try : 
+            return 1/x[ind]
+        except ZeroDivisionError :
+            print("Cannot divide by zero!")
+        except IndexError:
+            print("Index out of range!")
+a = [5,6,0,7]
+
+# Works okay. returns 1/6, or 0.166666
+print(invert_at_index(a, 1))
+
+# Potential ZeroDivisionError
+print(invert_at_index(a, 2))
+
+# Potential IndexError
+print(invert_at_index(a, 5))
