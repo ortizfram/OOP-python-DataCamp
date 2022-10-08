@@ -44,6 +44,17 @@ acct = BankAccount(873555333)
 pn = Phone(873555333)
 print(acct == pn)
 #----------------------------------------------------------------------------------#
-""" when comparing a child object to a parent object
+""" <- when comparing a child object to a parent object
     Python always calls the child's __eq__() method ."""
+#----------------------------------------------------------------------------------#
+#String formatting review
+my_num = 5
+my_str = "Hello"
+
+#f = ...
+f = "my_num is {}, and my_str is \"{}\".".format(my_num, my_str) 
+print(f)
+# my_num is 5, and my_str is "Hello".
+#----------------------------------------------------------------------------------#
+""" <- you use \"  \"  to scape quotation mark function & just for them to appear as decoration ."""
 #----------------------------------------------------------------------------------#
