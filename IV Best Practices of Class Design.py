@@ -91,4 +91,4 @@ Restricting access methods:
       >  Only used for built-in methods (__init__(), __repr__()) 
     - use @property to customize access:
     - Overriding __getattr__(), __Setattr__():
-****************************************************************************
+****************************************************************************"""
