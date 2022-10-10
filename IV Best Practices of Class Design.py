@@ -76,7 +76,7 @@ e
       self.h= w 
 #-------------------------------------------------------------------------#
 # 2.d
-"""How does using these setter methods violate Liskov Substitution principle?
+""" <- How does using these setter methods violate Liskov Substitution principle?
 option 2 : 
 
 Each of the setter methods of Square change both h and w attributes, while 
