@@ -87,7 +87,8 @@ objects cannot be substituted for Rectangle into programs that rely on one attri
 Restricting access methods: 
    - naming conventions: 
         - start with single '_' --> "internal" , not part of public API
-      > helper method that checks attr validation
+      > helper method that checks attr validation,  if you see an attribute with one leading underscore in someone's class - 
+        don't use it! The dev trusts you with this responsibility.
         - start with couble '__' -> "private" (psudo attributes), to prevent name clashes in inherited classes
       > version attr of class & shouldnt be passed to child classes
         - __name__
