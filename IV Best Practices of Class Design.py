@@ -85,10 +85,14 @@ objects cannot be substituted for Rectangle into programs that rely on one attri
 #-------------------------------------------------------------------------#
 """*************************************************************************
 Restricting access methods: 
-    - naming conventions: 
+   - naming conventions: 
         - start with single '_' --> "internal" , not part of public API
+      > helper method that checks attr validation
         - start with couble '__' -> "private" (psudo attributes), to prevent name clashes in inherited classes
-      >  Only used for built-in methods (__init__(), __repr__()) 
-    - use @property to customize access:
-    - Overriding __getattr__(), __Setattr__():
+      > version attr of class & shouldnt be passed to child classes
+        - __name__
+      > runs whenever obj is printed
+   >  Only used for built-in methods (__init__(), __repr__()) 
+   - use @property to customize access:
+   - Overriding __getattr__(), __Setattr__():
 ****************************************************************************"""
