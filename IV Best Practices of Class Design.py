@@ -26,3 +26,18 @@ Child talking!
 Talkative Child talking!
 Parent talking!"""
 #-------------------------------------------------------------------------#
+# 2.a
+# Define a Rectangle class
+class Rectangle():
+    def __init__(self,h, w):
+        self.h = h
+        self.w= w
+
+# Define a Square class
+class Square(Rectangle):
+    def __init__(self, w):
+        Rectangle.__init__(self,w,w)
+""" <- Square constructor that accepts one parameter w, and sets both
+the h and w attributes to the value of w."""
+#-------------------------------------------------------------------------#
+# 2.b
