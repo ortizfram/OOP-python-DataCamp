@@ -82,3 +82,13 @@ option 2 :
 Each of the setter methods of Square change both h and w attributes, while 
 setter methods of Rectangle change only one attribute at a time, so the Square 
 objects cannot be substituted for Rectangle into programs that rely on one attribute staying constant."""
+#-------------------------------------------------------------------------#
+"""*************************************************************************
+Restricting access methods: 
+    - naming conventions: 
+        - start with single '_' --> "internal" , not part of public API
+        - start with couble '__' -> "private" (psudo attributes), to prevent name clashes in inherited classes
+      >  Only used for built-in methods (__init__(), __repr__()) 
+    - use @property to customize access:
+    - Overriding __getattr__(), __Setattr__():
+****************************************************************************
