@@ -156,3 +156,10 @@ class Employee:
         
     except self.salary + amount <  Employee.MIN_SALARY:
           print("The salary after bonus is too low!")
+#----------------------------------------------------------------------------------#
+""" <- except block for a parent exception will catch child exceptions.
+
+ <-   better to include an except block for a child exception before the block for a 
+      parent exception, otherwise the child exceptions will be always be caught in the
+      parent block, and the except block for the child will never be executed."""
+#----------------------------------------------------------------------------------#
