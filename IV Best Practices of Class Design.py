@@ -41,8 +41,9 @@ class Square(Rectangle):
 the h and w attributes to the value of w."""
 #-------------------------------------------------------------------------#
 # 2.b
-"""in the console or the script pane, create a Square object with side length 4. Then try assigning 7 to the h attribute.
+""" <- in the console or the script pane, create a Square object with side length 4. Then try assigning 7 to the h attribute.
 What went wrong with these classes
 
-# option 2 :
-We cannot set the h attribute to 7 in the Square object because it will cause an error."""
+# option 3 :
+The 4x4 Square object would no longer be a square if we assign 7 to h."""
+#-------------------------------------------------------------------------#
