@@ -121,3 +121,14 @@ print(bd1._is_valid())
 
 bd2 = BetterDate(2020, 6, 45)
 print(bd2._is_valid())
+"""*************************************************************************
+@Property:
+     *      _salary -> "protected" attribute
+     $      @property               #returns the data
+            def salary(self):
+               return self._salary
+     $      @salary_setter          #implements validations & sets the attr
+            def salary(self,)
+     # access property : emp.salary
+     # call setter : emp.salary = 6.000
+****************************************************************************"""
