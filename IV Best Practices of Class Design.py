@@ -132,3 +132,49 @@ print(bd2._is_valid())
      # access property : emp.salary
      # call setter : emp.salary = 6.000
 ****************************************************************************"""
+# a
+# Create a Customer class
+class Customer:
+    def __init__(self,name,new_bal):
+        self.name = name
+        if new_bal < 0:
+            raise ValueError
+        else :
+            self._balance = new_bal #protected attr
+#-------------------------------------------------------------------------#
+# b
+class Customer:
+    def __init__(self, name, new_bal):
+        self.name = name
+        if new_bal < 0:
+           raise ValueError("Invalid balance!")
+        self._balance = new_bal  
+    
+    # Add a decorated balance() method returning _balance
+    @property
+    def balance(self):
+        return self._balance 
+#-------------------------------------------------------------------------#
+class Customer:
+    def __init__(self, name, new_bal):
+        self.name = name
+        if new_bal < 0:
+           raise ValueError("Invalid balance!")
+        self._balance = new_bal  
+
+    # Add a decorated balance() method returning _balance        
+    @property
+    def balance(self):
+        return self._balance
+     
+    # Add a setter balance() method
+    @balance_setter
+    def balance(self, new_balance):
+        # Validate the parameter value
+        if new_balance < 0 :
+            raise ValueError
+        else:
+            self._balance = new_balance
+        
+        # Print "Setter method is called"
+        print("Setter method is called")
