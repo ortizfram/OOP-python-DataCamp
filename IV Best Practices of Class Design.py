@@ -96,3 +96,27 @@ Restricting access methods:
    - use @property to customize access:
    - Overriding __getattr__(), __Setattr__():
 ****************************************************************************"""
+# Add class attributes for max number of days and months
+class BetterDate:
+    _MAX_DAYS = 30  #internal attribute 
+    _MAX_MONTHS = 12 #internal attribute 
+    
+    def __init__(self, year, month, day):
+        self.year, self.month, self.day = year, month, day
+        
+    @classmethod
+    def from_str(cls, datestr):
+    """map() function applies a given function to each item of an iterable (list, tuple etc.) and returns an iterator."""        
+        year, month, day = map(int, datestr.split("-"))
+        return cls(year, month, day)
+    
+    # Add _is_valid() checking day and month values
+    def _is_valid(self):
+
+        return self.month <= BetterDate._MAX_MONTHS and self.day <= BetterDate._MAX_DAYS
+
+bd1 = BetterDate(2020, 4, 30)
+print(bd1._is_valid())
+
+bd2 = BetterDate(2020, 6, 45)
+print(bd2._is_valid())
