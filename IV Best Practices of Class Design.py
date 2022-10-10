@@ -127,7 +127,7 @@ print(bd2._is_valid())
      $      @property               #returns the data
             def salary(self):
                return self._salary
-     $      @salary_setter          #implements validations & sets the attr
+     $      @salary_setter          #implements validations & sets the attr(if don't add this it'd be read-only, add getter)
             def salary(self,)
      # access property : emp.salary
      # call setter : emp.salary = 6.000
